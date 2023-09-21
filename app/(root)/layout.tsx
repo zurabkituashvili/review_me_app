@@ -11,8 +11,8 @@ import Bottombar from "@/components/shared/Bottombar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "TitCock",
-  description: "A Next.js 13 Meta TitCock Application",
+  title: "ReviewMe",
+  description: "A Next.js 13 Meta ReviewMe Application",
 };
 
 export default function RootLayout({
