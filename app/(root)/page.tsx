@@ -1,4 +1,4 @@
-import { currentUser } from "@clerk/nextjs";
+import { UserButton, currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 import ThreadCard from "@/components/cards/ThreadCard";
@@ -25,8 +25,10 @@ async function Home({
 
   return (
     <>
-      <h1 className="head-text text-left">Home</h1>
-
+      <div className="flex items-center">
+        <UserButton />
+        <h1 className="head-text text-left">Home</h1>
+      </div>
       <section className="mt-9 flex flex-col gap-10">
         {result.posts.length === 0 ? (
           <p className="no-result">No threads found</p>
@@ -48,7 +50,6 @@ async function Home({
           </>
         )}
       </section>
-
       <Pagination
         path="/"
         pageNumber={searchParams?.page ? +searchParams.page : 1}
